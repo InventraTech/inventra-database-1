@@ -13,7 +13,7 @@ select * from setor;
 -- MARCA
 -----------------------------------------------------------------------------------------------------------
 INSERT INTO Marca (nome) VALUES
-('Sadia'),
+('Swift'),
 ('Perdigão'),
 ('Friboi'),
 ('Seara'),
@@ -24,7 +24,7 @@ INSERT INTO Marca (nome) VALUES
 ('Coca-Cola'),
 ('Bunge'),
 ('Qualitá'),
-('Swift');
+('Azuli');
 SELECT * FROM marca;
 -----------------------------------------------------------------------------------------------------------
 -- CATEGORIA
@@ -84,19 +84,19 @@ INSERT INTO fornecedor (nome_juridico, cnpj, email, nota_vpq, fk_endereco) VALUE
 -----------------------------------------------------------------------------------------------------------
 -- FUNCIONARIO (12 funcionários)
 ------------------------------------------------------------------------------------------------------------
-INSERT INTO Funcionario (nome, senha, fk_setor, email, telefone, cpf, dt_admissao, status) VALUES
-('Ana Paula Souza', '$2b$10$hashsenha0001exemplo', 1, 'ana.souza@restaurante.com', '11912345671', '11122233344', '2021-03-15', 'Ativo'),
-('Bruno Carvalho', '$2b$10$hashsenha0002exemplo', 2, 'bruno.carvalho@restaurante.com', '11912345672', '22233344455', '2020-07-01', 'Ativo'),
-('Carla Mendes', '$2b$10$hashsenha0003exemplo', 3, 'carla.mendes@restaurante.com', '11912345673', '33344455566', '2022-01-10', 'Ativo'),
-('Diego Ferreira', '$2b$10$hashsenha0004exemplo', 2, 'diego.ferreira@restaurante.com', '11912345674', '44455566677', '2019-11-20', 'Ativo'),
-('Elaine Rodrigues', '$2b$10$hashsenha0005exemplo', 4, 'elaine.rodrigues@restaurante.com', '11912345675', '55566677788', '2018-05-05', 'Ativo'),
-('Fábio Lima', '$2b$10$hashsenha0006exemplo', 5, 'fabio.lima@restaurante.com', '11912345676', '66677788899', '2021-09-12', 'Ativo'),
-('Gabriela Torres', '$2b$10$hashsenha0007exemplo', 1, 'gabriela.torres@restaurante.com', '11912345677', '77788899900', '2023-02-28', 'Ativo'),
-('Henrique Alves', '$2b$10$hashsenha0008exemplo', 2, 'henrique.alves@restaurante.com', '11912345678', '88899900011', '2022-06-18', 'Ativo'),
-('Isabela Martins', '$2b$10$hashsenha0009exemplo', 6, 'isabela.martins@restaurante.com', '11912345679', '99900011122', '2020-10-03', 'Ativo'),
-('João Pedro Nunes', '$2b$10$hashsenha0010exemplo', 3, 'joao.nunes@restaurante.com', '11912345680', '10011122233', '2019-04-22', 'Inativo'),
-('Karina Barbosa', '$2b$10$hashsenha0011exemplo', 1, 'karina.barbosa@restaurante.com', '11912345681', '12112233344', '2023-08-14', 'Ativo'),
-('Lucas Pereira', '$2b$10$hashsenha0012exemplo', 2, 'lucas.pereira@restaurante.com', NULL, '13122334455', '2024-01-09', 'Ativo');
+INSERT INTO funcionario (nome, senha, fk_setor, email, cpf, dt_admissao, status) VALUES
+('Ana Paula Souza', '$2b$10$hashsenha0001exemplo', 1, 'ana.souza@restaurante.com', '11122233344', '2021-03-15', 'Ativo'),
+('Bruno Carvalho', '$2b$10$hashsenha0002exemplo', 2, 'bruno.carvalho@restaurante.com', '22233344455', '2020-07-01', 'Ativo'),
+('Carla Mendes', '$2b$10$hashsenha0003exemplo', 3, 'carla.mendes@restaurante.com', '33344455566', '2022-01-10', 'Ativo'),
+('Diego Ferreira', '$2b$10$hashsenha0004exemplo', 2, 'diego.ferreira@restaurante.com', '44455566677', '2019-11-20', 'Ativo'),
+('Elaine Rodrigues', '$2b$10$hashsenha0005exemplo', 4, 'elaine.rodrigues@restaurante.com', '55566677788', '2018-05-05', 'Ativo'),
+('Fábio Lima', '$2b$10$hashsenha0006exemplo', 5, 'fabio.lima@restaurante.com', '66677788899', '2021-09-12', 'Ativo'),
+('Gabriela Torres', '$2b$10$hashsenha0007exemplo', 1, 'gabriela.torres@restaurante.com', '77788899900', '2023-02-28', 'Ativo'),
+('Henrique Alves', '$2b$10$hashsenha0008exemplo', 2, 'henrique.alves@restaurante.com', '88899900011', '2022-06-18', 'Ativo'),
+('Isabela Martins', '$2b$10$hashsenha0009exemplo', 6, 'isabela.martins@restaurante.com', '99900011122', '2020-10-03', 'Ativo'),
+('João Pedro Nunes', '$2b$10$hashsenha0010exemplo', 3, 'joao.nunes@restaurante.com', '10011122233', '2019-04-22', 'Inativo'),
+('Karina Barbosa', '$2b$10$hashsenha0011exemplo', 1, 'karina.barbosa@restaurante.com', '12112233344', '2023-08-14', 'Ativo'),
+('Lucas Pereira', '$2b$10$hashsenha0012exemplo', 2, 'lucas.pereira@restaurante.com', '13122334455', '2024-01-09', 'Ativo');
 SELECT * FROM funcionario;
 -----------------------------------------------------------------------------------------------------------
 -- TELEFONE (fornecedores e funcionários, um vínculo por registro)
