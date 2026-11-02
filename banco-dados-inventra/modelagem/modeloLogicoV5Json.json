@@ -1,0 +1,1607 @@
+{
+  "tables": [
+    {
+      "id": "Q73x11cz4_ONoxdHaLwAC",
+      "name": "funcionario",
+      "x": -668.2704306655265,
+      "y": -253.04485772944116,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_funcionario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "WQLXNCalm4jHywsAsR0JS"
+        },
+        {
+          "id": "3a9jp_JLZrbqVZxYw5nBV",
+          "name": "nome",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 200
+        },
+        {
+          "id": "Tt-XqvOx4Q-stcvV-qvMJ",
+          "name": "senha",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "VLF1RqPZ7BOwknoTIjCGs",
+          "name": "fk_setor",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "lZjYC6Idi36rU75vKTT5l",
+          "name": "email",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "FCxcAMcjGxJGE8QireZrT",
+          "name": "telefone",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 15
+        },
+        {
+          "id": "f7xhPn7_NN4ZOJVeAFrtr",
+          "name": "cpf",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 14,
+          "values": []
+        },
+        {
+          "id": "kqzF-hdRI7wKhLhJoWR8X",
+          "name": "dt_admissao",
+          "type": "DATE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "fNYUuKkYqfG_gXH_O6JmV",
+          "name": "status",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "If2VM3QzlXWXBL8Pi8LYk",
+          "name": "id_admin",
+          "type": "BOOLEAN",
+          "default": "false",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#1b6080",
+      "collapsed": false,
+      "hidden": false
+    },
+    {
+      "id": "B1zjnX8e9Qlr7OoFqFWjf",
+      "name": "produto",
+      "x": 283.6394474505441,
+      "y": -290.3549175137707,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_produto",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "cjoLWeOFi9YxVuX2gFUb1"
+        },
+        {
+          "id": "JuBsSu-coc-F5f54otnwP",
+          "name": "nome",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 40
+        },
+        {
+          "id": "XoukJKJkvhU93GsCrRjgF",
+          "name": "fk_marca",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "_kfve9JdrO7qNSjcp7etA",
+          "name": "fk_categoria",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "rdwCbcwE-eg7EGmJncLa4",
+          "name": "unidade_medida",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "JilwKn2vGeMnaNFk-w7gs",
+          "name": "estoque_min",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "u6pE7C3cXIP8lhzNMXOYe",
+          "name": "estoque_max",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "IhJ8XXdGCEAObwYcDhsL3",
+          "name": "fk_fornecedor",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "4_IUVHWr6wS2CB66k_EsT",
+          "name": "descricao",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "htbmyNIuIouVtjwCgDFm-",
+          "name": "ativo",
+          "type": "BOOLEAN",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "gSty4NoxxQr2PrIkvbC0j",
+      "name": "fornecedor",
+      "x": -224.97254754711275,
+      "y": -282.7404568806595,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_fornecedor",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "hYK50is5IhguGOTURinB7"
+        },
+        {
+          "id": "SRDfWlu9F_bfdngS9FH4f",
+          "name": "nome_juridico",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 150
+        },
+        {
+          "id": "YeA8WQWRqq9rDO4VnQgQB",
+          "name": "cnpj",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 18
+        },
+        {
+          "id": "I8KI1330Ued8b61wtO8pI",
+          "name": "email",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "Tu5_yzft1Hnv-anzDTCU7",
+          "name": "nota_vpq",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "-qydu-BHQs1XrcA3haSVh",
+          "name": "fk_endereco",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "-aNle1XQ7AqzBAaeULPpS",
+      "name": "requisicao",
+      "x": -110.5692617864425,
+      "y": 202.52625567455422,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_requisicao",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "_WJJ5pF9ifp-PXpNkrIZH"
+        },
+        {
+          "id": "sqSOI_X2prFnUnrWK4Fmm",
+          "name": "fk_tipo_requisicao",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "fEKbA2rqw5mIQl3vzctst",
+          "name": "quantidade_prod",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "zAaT0WFqWrYoViBct9MJh",
+          "name": "motivo",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 80
+        },
+        {
+          "id": "lKpdLXM9foYrK3BDLxTn0",
+          "name": "status",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 30
+        },
+        {
+          "id": "WMjaXVk7WzbIxPlcHZc-5",
+          "name": "dt_requisicao",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "Ej2ETrUNnaOPQ4a-mDTE4",
+          "name": "fk_funcionario_solicitante",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "n5oNAyYv5cKSak_EHFCCR",
+          "name": "fk_funcionario_aprovador",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "efJNl1WwxBtUBnUB5L3Fc",
+          "name": "fk_produto",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "x1duh5a6xRYgY0HXzonSi",
+      "name": "tipo_requisicao",
+      "x": -671.7349502102079,
+      "y": 185.95417098685914,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_tipo_requisicao",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "VqfAhlEJF8XuU8zlfXV8W"
+        },
+        {
+          "id": "RKvE88kAm_pgdy-nO9DSQ",
+          "name": "tipo",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 30
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "Eo1b45L6kT707AkjurlL4",
+      "name": "pre_lista",
+      "x": 321.0377856031073,
+      "y": 260.632314318285,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_preLista",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "lJXsmaBME_AErmQhevBAt"
+        },
+        {
+          "id": "bR8TG7Wyf_Duz1_9ZfFkA",
+          "name": "dt_lista",
+          "type": "DATE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "CYp1SDRBFttRWVREPTVWJ",
+      "name": "lote",
+      "x": 356.6020272432301,
+      "y": 596.2302807466601,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_lote",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "6ZFz7krR8-43nL_fIaomn"
+        },
+        {
+          "id": "1s8jC-jnecLijygMO9FPX",
+          "name": "fk_produto",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "V3CxP8lx0V5NIL1xdQyXb",
+          "name": "numero_lote",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 80
+        },
+        {
+          "id": "Vz_RqouFW4tvxlHCbi9G-",
+          "name": "qtd_inicial",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "hqzbYroUsLlwkEJPDmp7B",
+          "name": "qtd_atual",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "5e96M9Ib6YnCxz5D4ijGM",
+          "name": "dt_entrada",
+          "type": "DATE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "715OaqK9tBKsLCw_JtYrf",
+          "name": "dt_validade",
+          "type": "DATE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "6Qmg73O1j9CKJKDaMBB3s",
+          "name": "valor_compra",
+          "type": "NUMERIC",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "10,2"
+        },
+        {
+          "id": "qgd5ZVEHZZJmTrJfYSTp2",
+          "name": "nota_fiscal",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "S5brWwKJ8XI0EeWpPaCwB",
+      "name": "historico",
+      "x": -692.8975620359992,
+      "y": 591.898211886331,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_historico",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "mF0wsNNKUC8LIHzcz06pu"
+        },
+        {
+          "id": "zGu0qrL89tZC0_BYPj1Xe",
+          "name": "fk_funcionario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "rddQ9O4CQJDBZWCTFQzvc",
+          "name": "fk_lote",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "TV83Eftjpoi1dXvdS6mVj",
+          "name": "tipo_movimentacao",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 30
+        },
+        {
+          "id": "EwrsGoOFWTkU1cCDmQs0W",
+          "name": "motivo",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "zphUo30h0QXmVg0tR6-I0",
+          "name": "dt_hora",
+          "type": "TIMESTAMP",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "ZLFXf07FoxneePIsl3p_k",
+      "name": "categoria",
+      "x": 784.479428648731,
+      "y": -280.72713540179586,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_categoria",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "yB6qAkNGSjQY4kXoJvIb-"
+        },
+        {
+          "id": "n368rL_U90ISt6a_iMqhK",
+          "name": "nome",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "dJ-Ecpqjw2E4iubKfwn07",
+          "name": "descricao",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "80GY9u4ewIzFusFjHC4ii",
+      "name": "setor",
+      "x": -1019.314669845808,
+      "y": -2.187763178993123,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_setor",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "CSd4WL_ZQ_5SJX5UPJ7ZU"
+        },
+        {
+          "id": "pTeYDW3vJdHAwFOMr_-Oc",
+          "name": "nome",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 200
+        },
+        {
+          "id": "Z-zjy_6TgUW6rsn5K5GU8",
+          "name": "descricao",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "sbBkwFsahUi7CcPKwEKAP",
+      "name": "marca",
+      "x": 781.257425788207,
+      "y": 44.72469902144576,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_marca",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "lUZBAVnuPeTHaPAfahYov"
+        },
+        {
+          "id": "CFRDiAOvNSi847K-eNX0n",
+          "name": "nome",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "tMsxm8k2ylSNkt5bipMhJ",
+          "name": "descricao",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "KT7K5rNlfq469nuAHBu8h",
+      "name": "endereco",
+      "x": -553.7070560879466,
+      "y": -514.4174569287527,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_endereco",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "hMVWlfnTXIK8IdLQlvf5A"
+        },
+        {
+          "id": "8KMBt3ZfDGOfvnNYHrOKb",
+          "name": "estado",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "ubFwaUDi2MqeeBzexUBpT",
+          "name": "cidade",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 255
+        },
+        {
+          "id": "VCC8T1WEW6A7DFNzsV8-d",
+          "name": "cep",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 9
+        },
+        {
+          "id": "RbSfNwZrPVvsZOQglEM4N",
+          "name": "complemento",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    },
+    {
+      "id": "KNj41C0gjgrb3mClpj3up",
+      "name": "telefone",
+      "x": -1158.428175257221,
+      "y": 284.8674505710063,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_telefone",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "1mLDF496zAPz8k89q9_cU"
+        },
+        {
+          "id": "aXRtCj6xq36eZqqY2opvf",
+          "name": "fk_fornecedor",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "ze26zm1ddCYmU1cG6auau",
+          "name": "fk_funcionario",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "zucbknmXWmS2I_fdWIIMi",
+          "name": "telefone",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": 20
+        },
+        {
+          "id": "BCPyejR677iWAoH8oi54c",
+          "name": "descricao",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false,
+      "width": 232,
+      "inherits": []
+    },
+    {
+      "id": "SwdQXyXSYCumeloiEwgvw",
+      "name": "item_pre_lista",
+      "x": 772.3734586855164,
+      "y": 293.06704583065346,
+      "locked": false,
+      "fields": [
+        {
+          "name": "id_item_lista",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "unsigned": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "",
+          "id": "J3GhzQckaN8KpjMO0EYWN"
+        },
+        {
+          "id": "CULpRPY8mWRhKWQTRvTaD",
+          "name": "fk_pre_lista",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "hjGud3sCl9GZwYJTpgqLH",
+          "name": "fk_fornecedor",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "M9sJozfA0Rh-9Izxm2WaO",
+          "name": "fk_produto",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        },
+        {
+          "id": "DLW0JrK8SBhgK_rf4c88h",
+          "name": "qtd",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "uniqueConstraints": [],
+      "color": "#175e7a",
+      "collapsed": false
+    }
+  ],
+  "relationships": [
+    {
+      "startTableId": "gSty4NoxxQr2PrIkvbC0j",
+      "startFieldId": "hYK50is5IhguGOTURinB7",
+      "endTableId": "B1zjnX8e9Qlr7OoFqFWjf",
+      "endFieldId": "IhJ8XXdGCEAObwYcDhsL3",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "hYK50is5IhguGOTURinB7",
+          "endFieldId": "IhJ8XXdGCEAObwYcDhsL3"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Fornecedor_id_fornecedor_Produto",
+      "id": "ohLW91izB_XTQdB2iOv0r"
+    },
+    {
+      "startTableId": "x1duh5a6xRYgY0HXzonSi",
+      "startFieldId": "VqfAhlEJF8XuU8zlfXV8W",
+      "endTableId": "-aNle1XQ7AqzBAaeULPpS",
+      "endFieldId": "sqSOI_X2prFnUnrWK4Fmm",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "VqfAhlEJF8XuU8zlfXV8W",
+          "endFieldId": "sqSOI_X2prFnUnrWK4Fmm"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Tipo_Requisicao_id_tipoRequisicao_Requisicoes",
+      "id": "dUDppJv8vandVKYFBtwgS"
+    },
+    {
+      "startTableId": "Q73x11cz4_ONoxdHaLwAC",
+      "startFieldId": "WQLXNCalm4jHywsAsR0JS",
+      "endTableId": "-aNle1XQ7AqzBAaeULPpS",
+      "endFieldId": "Ej2ETrUNnaOPQ4a-mDTE4",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "WQLXNCalm4jHywsAsR0JS",
+          "endFieldId": "Ej2ETrUNnaOPQ4a-mDTE4"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Funcionario_id_funcionario_Requisicoes",
+      "id": "8ec3d5BnAKme6IlrnyTcd"
+    },
+    {
+      "startTableId": "Q73x11cz4_ONoxdHaLwAC",
+      "startFieldId": "WQLXNCalm4jHywsAsR0JS",
+      "endTableId": "-aNle1XQ7AqzBAaeULPpS",
+      "endFieldId": "n5oNAyYv5cKSak_EHFCCR",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "WQLXNCalm4jHywsAsR0JS",
+          "endFieldId": "n5oNAyYv5cKSak_EHFCCR"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Funcionario_id_funcionario_Requisicoes",
+      "id": "ztt0a9HqBijDi5N3uY-FK"
+    },
+    {
+      "startTableId": "B1zjnX8e9Qlr7OoFqFWjf",
+      "startFieldId": "cjoLWeOFi9YxVuX2gFUb1",
+      "endTableId": "-aNle1XQ7AqzBAaeULPpS",
+      "endFieldId": "efJNl1WwxBtUBnUB5L3Fc",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "cjoLWeOFi9YxVuX2gFUb1",
+          "endFieldId": "efJNl1WwxBtUBnUB5L3Fc"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Produto_id_produto_Requisicoes",
+      "id": "PlC5o08EAWGHUCjT1W_H9"
+    },
+    {
+      "startTableId": "B1zjnX8e9Qlr7OoFqFWjf",
+      "startFieldId": "cjoLWeOFi9YxVuX2gFUb1",
+      "endTableId": "Eo1b45L6kT707AkjurlL4",
+      "endFieldId": "lJXsmaBME_AErmQhevBAt",
+      "cardinality": "one_to_one",
+      "fields": [
+        {
+          "startFieldId": "cjoLWeOFi9YxVuX2gFUb1",
+          "endFieldId": "lJXsmaBME_AErmQhevBAt"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Produto_id_produto_Pre_lista",
+      "id": "C12L_yuoXKz8P81BuVIUa"
+    },
+    {
+      "startTableId": "B1zjnX8e9Qlr7OoFqFWjf",
+      "startFieldId": "cjoLWeOFi9YxVuX2gFUb1",
+      "endTableId": "CYp1SDRBFttRWVREPTVWJ",
+      "endFieldId": "1s8jC-jnecLijygMO9FPX",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "cjoLWeOFi9YxVuX2gFUb1",
+          "endFieldId": "1s8jC-jnecLijygMO9FPX"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Produto_id_produto_Lote",
+      "id": "NT-I6Ayse9zPgNvke1RU2"
+    },
+    {
+      "startTableId": "Q73x11cz4_ONoxdHaLwAC",
+      "startFieldId": "WQLXNCalm4jHywsAsR0JS",
+      "endTableId": "S5brWwKJ8XI0EeWpPaCwB",
+      "endFieldId": "zGu0qrL89tZC0_BYPj1Xe",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "WQLXNCalm4jHywsAsR0JS",
+          "endFieldId": "zGu0qrL89tZC0_BYPj1Xe"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Funcionario_id_funcionario_Historico",
+      "id": "bErwIdaOksBo_nNOh6Thl"
+    },
+    {
+      "startTableId": "CYp1SDRBFttRWVREPTVWJ",
+      "startFieldId": "6ZFz7krR8-43nL_fIaomn",
+      "endTableId": "S5brWwKJ8XI0EeWpPaCwB",
+      "endFieldId": "rddQ9O4CQJDBZWCTFQzvc",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "6ZFz7krR8-43nL_fIaomn",
+          "endFieldId": "rddQ9O4CQJDBZWCTFQzvc"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Lote_id_estoque_Historico",
+      "id": "pl6VK3y8OYIAN6jCbnOLn"
+    },
+    {
+      "startTableId": "ZLFXf07FoxneePIsl3p_k",
+      "startFieldId": "yB6qAkNGSjQY4kXoJvIb-",
+      "endTableId": "B1zjnX8e9Qlr7OoFqFWjf",
+      "endFieldId": "_kfve9JdrO7qNSjcp7etA",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "yB6qAkNGSjQY4kXoJvIb-",
+          "endFieldId": "_kfve9JdrO7qNSjcp7etA"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Categoria_id_categoria_Produto",
+      "id": "emgVCEWs0zssWmFVlZC1G"
+    },
+    {
+      "startTableId": "B1zjnX8e9Qlr7OoFqFWjf",
+      "startFieldId": "XoukJKJkvhU93GsCrRjgF",
+      "endTableId": "sbBkwFsahUi7CcPKwEKAP",
+      "endFieldId": "lUZBAVnuPeTHaPAfahYov",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "XoukJKJkvhU93GsCrRjgF",
+          "endFieldId": "lUZBAVnuPeTHaPAfahYov"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Produto_fk_marca_Marca",
+      "id": "EZIp9nhsQEpEyOoV_4B09"
+    },
+    {
+      "startTableId": "80GY9u4ewIzFusFjHC4ii",
+      "startFieldId": "CSd4WL_ZQ_5SJX5UPJ7ZU",
+      "endTableId": "Q73x11cz4_ONoxdHaLwAC",
+      "endFieldId": "VLF1RqPZ7BOwknoTIjCGs",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "CSd4WL_ZQ_5SJX5UPJ7ZU",
+          "endFieldId": "VLF1RqPZ7BOwknoTIjCGs"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Setor_id_setor_Funcionario",
+      "id": "D7OHJ2z5fmpXkhoKkcLrB"
+    },
+    {
+      "startTableId": "KT7K5rNlfq469nuAHBu8h",
+      "startFieldId": "hMVWlfnTXIK8IdLQlvf5A",
+      "endTableId": "gSty4NoxxQr2PrIkvbC0j",
+      "endFieldId": "-qydu-BHQs1XrcA3haSVh",
+      "cardinality": "one_to_many",
+      "fields": [
+        {
+          "startFieldId": "hMVWlfnTXIK8IdLQlvf5A",
+          "endFieldId": "-qydu-BHQs1XrcA3haSVh"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Regiao_id_regiao_Fornecedor",
+      "id": "dSBnDrOUVkyfmaKjdayQN"
+    },
+    {
+      "startTableId": "SwdQXyXSYCumeloiEwgvw",
+      "startFieldId": "CULpRPY8mWRhKWQTRvTaD",
+      "endTableId": "Eo1b45L6kT707AkjurlL4",
+      "endFieldId": "lJXsmaBME_AErmQhevBAt",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "CULpRPY8mWRhKWQTRvTaD",
+          "endFieldId": "lJXsmaBME_AErmQhevBAt"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Item_pre_lista_fk_pre_lista_Pre_lista",
+      "id": "nN-ckabLcClTxeyBbIIa7"
+    },
+    {
+      "startTableId": "SwdQXyXSYCumeloiEwgvw",
+      "startFieldId": "hjGud3sCl9GZwYJTpgqLH",
+      "endTableId": "gSty4NoxxQr2PrIkvbC0j",
+      "endFieldId": "hYK50is5IhguGOTURinB7",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "hjGud3sCl9GZwYJTpgqLH",
+          "endFieldId": "hYK50is5IhguGOTURinB7"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Item_pre_lista_fk_fornecedor_Fornecedor",
+      "id": "oT423l2o3eNtx_a5tPi8j"
+    },
+    {
+      "startTableId": "SwdQXyXSYCumeloiEwgvw",
+      "startFieldId": "M9sJozfA0Rh-9Izxm2WaO",
+      "endTableId": "B1zjnX8e9Qlr7OoFqFWjf",
+      "endFieldId": "cjoLWeOFi9YxVuX2gFUb1",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "M9sJozfA0Rh-9Izxm2WaO",
+          "endFieldId": "cjoLWeOFi9YxVuX2gFUb1"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_Item_pre_lista_fk_produto_Produto",
+      "id": "bVPT0JjWK89aBCRZkShAl"
+    },
+    {
+      "startTableId": "KNj41C0gjgrb3mClpj3up",
+      "startFieldId": "aXRtCj6xq36eZqqY2opvf",
+      "endTableId": "gSty4NoxxQr2PrIkvbC0j",
+      "endFieldId": "hYK50is5IhguGOTURinB7",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "aXRtCj6xq36eZqqY2opvf",
+          "endFieldId": "hYK50is5IhguGOTURinB7"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_telefone_fk_fornecedor_fornecedor",
+      "color": "#808080",
+      "id": "9SoApDPloNCBr4mq7zL_T"
+    },
+    {
+      "startTableId": "KNj41C0gjgrb3mClpj3up",
+      "startFieldId": "ze26zm1ddCYmU1cG6auau",
+      "endTableId": "Q73x11cz4_ONoxdHaLwAC",
+      "endFieldId": "WQLXNCalm4jHywsAsR0JS",
+      "cardinality": "many_to_one",
+      "fields": [
+        {
+          "startFieldId": "ze26zm1ddCYmU1cG6auau",
+          "endFieldId": "WQLXNCalm4jHywsAsR0JS"
+        }
+      ],
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "fk_telefone_fk_funcionario_funcionario",
+      "color": "#808080",
+      "id": "ItKgaysbD7PGywB3xUyYA"
+    }
+  ],
+  "notes": [
+    {
+      "id": 0,
+      "x": 291.97945719848275,
+      "y": -401.1650469180876,
+      "title": "unidade_medida",
+      "content": "CHECK para checar o tipo: \"KG\", \"L\", \"G\".",
+      "locked": false,
+      "color": "#fcf7ac",
+      "height": 90,
+      "width": 180
+    },
+    {
+      "id": 1,
+      "x": -925.7452033816958,
+      "y": 544.3171940379124,
+      "title": "tipo_movimentacao",
+      "content": "CHECK para checar o tipo: 'ENTRADA_OCR', 'RETIRADA_PRODUCAO', 'AJUSTE', 'PERDA'",
+      "locked": false,
+      "color": "#fcf7ac",
+      "height": 138,
+      "width": 180
+    },
+    {
+      "id": 2,
+      "x": -924.5009708459727,
+      "y": -209.38822206468652,
+      "title": "cargo",
+      "content": "CHECK para checar o tipo: \"Estoquista\", \"Comprador\", ou \"Admin\"",
+      "locked": false,
+      "color": "#fcf7ac",
+      "height": 138,
+      "width": 180
+    }
+  ],
+  "subjectAreas": [],
+  "views": [],
+  "database": "postgresql",
+  "types": [],
+  "enums": [],
+  "title": "Untitled Diagram"
+}
