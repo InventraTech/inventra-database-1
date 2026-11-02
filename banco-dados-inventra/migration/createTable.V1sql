@@ -156,10 +156,12 @@ CREATE TABLE IF NOT EXISTS historico (
 
 CREATE TABLE IF NOT EXISTS pre_lista (
     id_pre_lista SERIAL,
+    id_cozinha INTEGER,
     dt_lista DATE NOT NULL DEFAULT CURRENT_DATE,
 
     CONSTRAINT pk_pre_lista PRIMARY KEY (id_pre_lista)
 );
+
 
 CREATE TABLE IF NOT EXISTS item_pre_lista (
     id_item_lista SERIAL,
@@ -175,12 +177,17 @@ CREATE TABLE IF NOT EXISTS item_pre_lista (
     CONSTRAINT chk_item_pre_lista_qtd CHECK (qtd > 0)
 );
 
+
 CREATE TABLE IF NOT EXISTS telefone (
     id_telefone SERIAL,
-    fk_fornecedor INTEGER NOT NULL,
+    fk_fornecedor INTEGER,
+    fk_funcionario INTEGER,
     telefone VARCHAR(20) NOT NULL,
     descricao TEXT,
 
     CONSTRAINT pk_telefone PRIMARY KEY (id_telefone),
-    CONSTRAINT fk_telefone_fornecedor FOREIGN KEY (fk_fornecedor) REFERENCES fornecedor(id_fornecedor)
+    CONSTRAINT fk_telefone_fornecedor FOREIGN KEY (fk_fornecedor) REFERENCES fornecedor(id_fornecedor),
+    CONSTRAINT fk_telefone_funcionario FOREIGN KEY (fk_funcionario) REFERENCES funcionario(id_funcionario),
+    CONSTRAINT chk_telefone_vinculo CHECK ((fk_fornecedor IS NOT NULL AND fk_funcionario IS NULL) OR (fk_fornecedor IS NULL AND fk_funcionario IS NOT NULL))
 );
+

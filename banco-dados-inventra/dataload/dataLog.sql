@@ -8,8 +8,7 @@ INSERT INTO Setor (nome, descricao) VALUES
 ('Administrativo', 'Setor de gestão administrativa geral da unidade'),
 ('Financeiro', 'Setor de controle de pagamentos, custos e faturamento'),
 ('Salão', 'Setor de atendimento e serviço ao cliente');
-select * from setor
-
+select * from setor;
 -----------------------------------------------------------------------------------------------------------
 -- MARCA
 -----------------------------------------------------------------------------------------------------------
@@ -26,9 +25,7 @@ INSERT INTO Marca (nome) VALUES
 ('Bunge'),
 ('Qualitá'),
 ('Swift');
-SELECT * FROM marca
-
-
+SELECT * FROM marca;
 -----------------------------------------------------------------------------------------------------------
 -- CATEGORIA
 -----------------------------------------------------------------------------------------------------------
@@ -41,12 +38,11 @@ INSERT INTO Categoria (nome, descricao) VALUES
 ('Hortifruti', 'Frutas, legumes e verduras frescas'),
 ('Descartáveis', 'Embalagens, guardanapos e materiais descartáveis'),
 ('Limpeza', 'Produtos de higienização e limpeza geral');
-SELECT * FROM Categoria
-
+SELECT * FROM Categoria;
 -----------------------------------------------------------------------------------------------------------
--- REGIAO
+-- ENDERECO
 -----------------------------------------------------------------------------------------------------------
-INSERT INTO Regiao (estado, cidade, cep) VALUES
+INSERT INTO endereco (estado, cidade, cep) VALUES
 ('SP', 'São Paulo', '01310-100'),
 ('SP', 'Campinas', '13010-000'),
 ('RJ', 'Rio de Janeiro', '20040-020'),
@@ -57,8 +53,7 @@ INSERT INTO Regiao (estado, cidade, cep) VALUES
 ('BA', 'Salvador', '40010-000'),
 ('GO', 'Goiânia', '74010-000'),
 ('PE', 'Recife', '50010-000');
-SELECT * FROM Regiao
-
+SELECT * FROM endereco;
 -----------------------------------------------------------------------------------------------------------
 -- TIPO_REQUISICAO
 -----------------------------------------------------------------------------------------------------------
@@ -72,19 +67,19 @@ INSERT INTO Tipo_Requisicao (tipo) VALUES
 -----------------------------------------------------------------------------------------------------------
 -- FORNECEDOR (12 fornecedores)
 -----------------------------------------------------------------------------------------------------------
-INSERT INTO Fornecedor (nome_juridico, cnpj, email, telefone, nota_vpq, fk_regiao) VALUES
-('Distribuidora Boa Mesa Ltda', '12345678000190', 'contato@boamesa.com.br', '11987654321', 9, 1),
-('Atacado Central de Alimentos SA', '23456789000191', 'vendas@atacadocentral.com.br', '19987654322', 8, 2),
-('Carnes Premium Distribuidora', '34567890000192', 'comercial@carnespremium.com.br', '21987654323', 7, 3),
-('Hortifruti Frescor Ltda', '45678901000193', 'pedidos@frescorhorti.com.br', '31987654324', 9, 4),
-('Bebidas & Cia Distribuidora', '56789012000194', 'vendas@bebidasecia.com.br', '51987654325', 6, 5),
-('Laticínios do Sul Ltda', '67890123000195', 'contato@laticiniosdosul.com.br', '41987654326', 8, 6),
-('Embalagens Sustentáveis SA', '78901234000196', 'comercial@embalasust.com.br', '48987654327', 7, 7),
-('Grãos e Cereais Nordeste Ltda', '89012345000197', 'vendas@graosnordeste.com.br', '71987654328', 5, 8),
-('Distribuidora Central Goiás', '90123456000198', 'contato@centralgoias.com.br', '62987654329', 6, 9),
-('Frigorífico Pernambuco Ltda', '01234567000199', 'comercial@frigope.com.br', '81987654330', 9, 10),
-('Química Limpa Distribuidora', '11223344000155', 'vendas@quimicalimpa.com.br', '11987651111', 4, 1),
-('Importadora Sabor & Arte SA', '22334455000166', 'contato@saborearte.com.br', '19987652222', 8, 2);
+INSERT INTO fornecedor (nome_juridico, cnpj, email, nota_vpq, fk_endereco) VALUES
+('Distribuidora Boa Mesa Ltda', '12345678000190', 'contato@boamesa.com.br', 9, 1),
+('Atacado Central de Alimentos SA', '23456789000191', 'vendas@atacadocentral.com.br', 8, 2),
+('Carnes Premium Distribuidora', '34567890000192', 'comercial@carnespremium.com.br', 7, 3),
+('Hortifruti Frescor Ltda', '45678901000193', 'pedidos@frescorhorti.com.br', 9, 4),
+('Bebidas & Cia Distribuidora', '56789012000194', 'vendas@bebidasecia.com.br', 6, 5),
+('Laticínios do Sul Ltda', '67890123000195', 'contato@laticiniosdosul.com.br', 8, 6),
+('Embalagens Sustentáveis SA', '78901234000196', 'comercial@embalasust.com.br', 7, 7),
+('Grãos e Cereais Nordeste Ltda', '89012345000197', 'vendas@graosnordeste.com.br', 5, 8),
+('Distribuidora Central Goiás', '90123456000198', 'contato@centralgoias.com.br', 6, 9),
+('Frigorífico Pernambuco Ltda', '01234567000199', 'comercial@frigope.com.br', 9, 10),
+('Química Limpa Distribuidora', '11223344000155', 'vendas@quimicalimpa.com.br', 4, 1),
+('Importadora Sabor & Arte SA', '22334455000166', 'contato@saborearte.com.br', 8, 2);
 
 -----------------------------------------------------------------------------------------------------------
 -- FUNCIONARIO (12 funcionários)
@@ -102,7 +97,35 @@ INSERT INTO Funcionario (nome, senha, fk_setor, email, telefone, cpf, dt_admissa
 ('João Pedro Nunes', '$2b$10$hashsenha0010exemplo', 3, 'joao.nunes@restaurante.com', '11912345680', '10011122233', '2019-04-22', 'Inativo'),
 ('Karina Barbosa', '$2b$10$hashsenha0011exemplo', 1, 'karina.barbosa@restaurante.com', '11912345681', '12112233344', '2023-08-14', 'Ativo'),
 ('Lucas Pereira', '$2b$10$hashsenha0012exemplo', 2, 'lucas.pereira@restaurante.com', NULL, '13122334455', '2024-01-09', 'Ativo');
-SELECT * FROM funcionario
+SELECT * FROM funcionario;
+-----------------------------------------------------------------------------------------------------------
+-- TELEFONE (fornecedores e funcionários, um vínculo por registro)
+-----------------------------------------------------------------------------------------------------------
+INSERT INTO telefone (fk_fornecedor, fk_funcionario, telefone, descricao) VALUES
+(1, NULL, '11987654321', 'Telefone do fornecedor'),
+(2, NULL, '19987654322', 'Telefone do fornecedor'),
+(3, NULL, '21987654323', 'Telefone do fornecedor'),
+(4, NULL, '31987654324', 'Telefone do fornecedor'),
+(5, NULL, '51987654325', 'Telefone do fornecedor'),
+(6, NULL, '41987654326', 'Telefone do fornecedor'),
+(7, NULL, '48987654327', 'Telefone do fornecedor'),
+(8, NULL, '71987654328', 'Telefone do fornecedor'),
+(9, NULL, '62987654329', 'Telefone do fornecedor'),
+(10, NULL, '81987654330', 'Telefone do fornecedor'),
+(11, NULL, '11987651111', 'Telefone do fornecedor'),
+(12, NULL, '19987652222', 'Telefone do fornecedor'),
+(NULL, 1, '11912345671', 'Telefone do funcionário'),
+(NULL, 2, '11912345672', 'Telefone do funcionário'),
+(NULL, 3, '11912345673', 'Telefone do funcionário'),
+(NULL, 4, '11912345674', 'Telefone do funcionário'),
+(NULL, 5, '11912345675', 'Telefone do funcionário'),
+(NULL, 6, '11912345676', 'Telefone do funcionário'),
+(NULL, 7, '11912345677', 'Telefone do funcionário'),
+(NULL, 8, '11912345678', 'Telefone do funcionário'),
+(NULL, 9, '11912345679', 'Telefone do funcionário'),
+(NULL, 10, '11912345680', 'Telefone do funcionário'),
+(NULL, 11, '11912345681', 'Telefone do funcionário');
+SELECT * FROM telefone;
 
 -- ============================
 -- PRODUTO (18 produtos)
@@ -126,8 +149,7 @@ INSERT INTO Produto (nome, fk_marca, fk_categoria, unidade_medida, estoque_min, 
 ('Guardanapo de Papel', 7, 7, 'UN', 50, 1000, 7, 'Guardanapo de papel folha simples, pacote com 50', true),
 ('Detergente Neutro', 11, 8, 'L', 10, 100, 11, 'Detergente neutro concentrado, galão de 5 litros', true),
 ('Água Sanitária', 11, 8, 'L', 10, 100, 11, 'Água sanitária, galão de 5 litros', false);
-SELECT * FROM produto
-
+SELECT * FROM produto;
 -- ============================
 -- LOTE (25 lotes)
 -- ============================
@@ -157,23 +179,23 @@ INSERT INTO Lote (fk_produto, numero_lote, qtd_inicial, qtd_atual, dt_entrada, d
 (6, 'LT-ARZ-2026-002', 250, 250, '2026-08-01', '2027-08-01', 22.50, 'NF-100514'),
 (7, 'LT-FEI-2026-002', 180, 180, '2026-08-01', '2027-08-01', 8.00, 'NF-100516'),
 (9, 'LT-CEV-2026-002', 250, 250, '2026-08-04', '2027-02-04', 3.20, 'NF-100518');
-SELECT * FROM lote
+SELECT * FROM lote;
 -----------------------------------------------------------------------------------------------------------
 -- PRE_LISTA (10 pré-listas de compra)
 -----------------------------------------------------------------------------------------------------------
-INSERT INTO Pre_lista (fk_produto, fk_fornecedor, dt_lista) VALUES
-(1, 3, '2026-08-01'),
-(2, 10, '2026-08-02'),
-(6, 8, '2026-08-01'),
-(7, 8, '2026-08-01'),
-(9, 5, '2026-08-03'),
-(12, 4, '2026-08-04'),
-(13, 4, '2026-08-04'),
-(15, 7, '2026-08-02'),
-(18, 11, '2026-08-05'),
-(10, 12, '2026-08-05');
-SELECT * FROM pre_lista
-
+-- id_cozinha: valores de exemplo correspondentes a IDs 1 a 43 de tb_kitchen.
+INSERT INTO pre_lista (id_cozinha, dt_lista) VALUES
+(17, '2026-08-01'),
+(3, '2026-08-02'),
+(29, '2026-08-01'),
+(8, '2026-08-01'),
+(41, '2026-08-03'),
+(12, '2026-08-04'),
+(35, '2026-08-04'),
+(6, '2026-08-02'),
+(23, '2026-08-05'),
+(14, '2026-08-05');
+SELECT * FROM pre_lista;
 -----------------------------------------------------------------------------------------------------------
 -- ITEM_PRE_LISTA (18 itens)
 -----------------------------------------------------------------------------------------------------------
@@ -196,12 +218,11 @@ INSERT INTO Item_pre_lista (fk_pre_lista, fk_fornecedor, fk_produto, qtd) VALUES
 (8, 7, 16, 400),
 (9, 11, 17, 40),
 (4, 8, 7, 60);
-SELECT * FROM item_pre_lista
-
+SELECT * FROM item_pre_lista;
 -----------------------------------------------------------------------------------------------------------
 -- REQUISICOES (18 requisições)
 -----------------------------------------------------------------------------------------------------------
-INSERT INTO Requisicao (id_tipoRequisicao, quantidade_prod, motivo, status, dt_requisicao, fk_funcionario_solicitante, fk_funcionario_aprovador, fk_produto) VALUES
+INSERT INTO Requisicao (fk_tipo_requisicao, quantidade_prod, motivo, status, dt_requisicao, fk_funcionario_solicitante, fk_funcionario_aprovador, fk_produto) VALUES
 (1, 100, 'Reposição de estoque semanal', 'Aprovada', '2026-07-01 09:15:00', 4, 2, 1),
 (2, 15, 'Uso na produção do dia', 'Aprovada', '2026-07-02 10:30:00', 1, 2, 2),
 (2, 10, 'Uso na produção do dia', 'Aprovada', '2026-07-02 10:45:00', 7, 2, 3),
@@ -220,8 +241,7 @@ INSERT INTO Requisicao (id_tipoRequisicao, quantidade_prod, motivo, status, dt_r
 (2, 18, 'Consumo diário da cozinha', 'Aprovada', '2026-07-28 09:20:00', 1, 2, 11),
 (1, 100, 'Reposição de estoque semanal', 'Aprovada', '2026-08-01 08:10:00', 4, 2, 16),
 (2, 10, 'Uso em limpeza geral', 'Aprovada', '2026-08-03 14:00:00', 12, 2, 17);
-SELECT * FROM requisicao
-
+SELECT * FROM requisicao;
 -----------------------------------------------------------------------------------------------------------
 -- HISTORICO (25 movimentações)
 -----------------------------------------------------------------------------------------------------------
@@ -252,4 +272,4 @@ INSERT INTO Historico (fk_funcionario, fk_lote, tipo_movimentacao, motivo, dt_ho
 (8, 25, 'ENTRADA_OCR', 'Recebimento de nova compra', '2026-08-04 08:40:00'),
 (11, 2, 'RETIRADA_PRODUCAO', 'Devolução ao fornecedor por lote fora do padrão', '2026-07-11 15:00:00'),
 (2, 15, 'AJUSTE', 'Transferência entre setores da unidade', '2026-07-25 11:45:00');
-SELECT * FROM historico
+SELECT * FROM historico;
